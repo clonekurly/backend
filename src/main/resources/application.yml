@@ -1,0 +1,26 @@
+spring:
+
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/clonekurly;MVCC=TRUE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+jwt:
+  secret: and0LXNlY3JldC1tYXJrZXQta3VybHktY2xvbmUtcHJvamVjdC1maWdodGluZy1zcHJpbmctc2VjdXJpdHktand0Cg==
+
+logging.level:
+  org.hibernate.SQL: debug
