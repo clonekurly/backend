@@ -8,6 +8,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 public class SecurityUtil {
 
     private SecurityUtil() { }
+
     public static Long getCurrentMemberId() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
@@ -15,7 +16,7 @@ public class SecurityUtil {
             throw new RuntimeException("Security Context에 인증 정보가 없습니다.");
         }
 
-        return Long.parseLong(authentication.getName());
+        return Long.parseLong(authentication.getName());    // userName으로 memberId 저장
     }
 
 }
