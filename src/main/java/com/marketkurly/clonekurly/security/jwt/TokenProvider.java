@@ -48,7 +48,7 @@ public class TokenProvider {
 
         // Access Token 생성
         String accessToken = Jwts.builder()
-                .setSubject(authentication.getName())
+                .setSubject(authentication.getName())   // userName으로 memberId 저장
                 .claim(AUTHORITIES_KEY, authorities)
                 .setExpiration(accessTokenValidity)
                 .signWith(key, SignatureAlgorithm.HS512)
