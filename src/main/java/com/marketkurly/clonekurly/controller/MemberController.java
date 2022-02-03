@@ -1,6 +1,6 @@
 package com.marketkurly.clonekurly.controller;
 
-import com.marketkurly.clonekurly.domain.Member;
+
 import com.marketkurly.clonekurly.domain.member.Members;
 import com.marketkurly.clonekurly.sevice.MemberService;
 import lombok.RequiredArgsConstructor;
@@ -23,8 +23,8 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    @PostMapping("/signup")
-    public ResponseEntity signup(@RequestBody Members req){
+    @PostMapping("/member")
+    public ResponseEntity member(@RequestBody Members req){
         Log.info("id = {}, password = {}, name ={},email={},phone={},address={},brithdate={}",req.getId(),req.getPassword(),req.getName(),req.getEmail(),req.getPhone(),req.getAddress(),req.getBirthDate());
         //logic 추가하기 
         

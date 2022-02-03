@@ -1,30 +1,30 @@
-package com.marketkurly.clonekurly.domain;
+// package com.marketkurly.clonekurly.domain;
 
-import lombok.*;
+// import lombok.*;
 
-import javax.persistence.*;
+// import javax.persistence.*;
 
-@Getter
-@RequiredArgsConstructor
-@AllArgsConstructor
-@Table(name = "member")
-@Builder
-@Entity
-public class Member {
+// @Getter
+// @RequiredArgsConstructor
+// @AllArgsConstructor
+// @Table(name = "member")
 
-    @Id
-    @Column(name = "member_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+// @Entity
+// public class Member {
 
-    @Column(nullable = false)
-    private String email;
+//     @Id
+//     @Column(name = "member_id")
+//     @GeneratedValue(strategy = GenerationType.IDENTITY)
+//     private Long id;
 
-    @Column(nullable = false)
-    private String password;
+//     @Column(nullable = false)
+//     private String email;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private Authority authority;
+//     @Column(nullable = false)
+//     private String password;
 
-}
+//     @Enumerated(EnumType.STRING)
+//     @Column(nullable = false)
+//     private Authority authority;
+
+// }
