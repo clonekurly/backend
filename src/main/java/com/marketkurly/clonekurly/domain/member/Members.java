@@ -60,7 +60,7 @@ public class Members {
      @Column(length = 400, name = "address",nullable = false)
      private String address;
 
-     @Column(name="brithdate")
+     @Column(name="birthdate")
      private Date birthDate;
 
      @Column(length = 2, name = "gender")
