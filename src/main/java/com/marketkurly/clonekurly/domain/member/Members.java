@@ -6,11 +6,14 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.*;
 
 import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,8 +22,13 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.crypto.Data;
 
+import com.marketkurly.clonekurly.domain.Authority;
 
-@NoArgsConstructor
+
+
+@Builder(toBuilder = true)
+@AllArgsConstructor(access = AccessLevel.PACKAGE)
+@NoArgsConstructor(access = AccessLevel.PACKAGE)
 @Getter
 @Setter
 @Entity
@@ -58,7 +66,11 @@ public class Members {
      @Column(length = 2, name = "gender")
      private String gender;
 
+     //joinDate 자동 표시 
      @Temporal(TemporalType.TIMESTAMP)
      private Date joineDate;
-
+     
+     @Enumerated(EnumType.STRING)
+     @Column(nullable = false)
+     private Authority authority;
 }
