@@ -1,6 +1,5 @@
 package com.marketkurly.clonekurly.repository;
 
-import com.marketkurly.clonekurly.domain.Member;
 import com.marketkurly.clonekurly.domain.member.Members;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,4 +10,5 @@ import java.util.Optional;
 @Repository
 public interface MemberRepository extends JpaRepository<Members, Long> {
     Optional<Members> findByEmail(String email);
+    Optional<Members> findById(String id);
 }
