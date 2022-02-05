@@ -1,6 +1,6 @@
 package com.marketkurly.clonekurly.controller.dto;
 
-import com.marketkurly.clonekurly.domain.Member;
+import com.marketkurly.clonekurly.domain.member.Member;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
