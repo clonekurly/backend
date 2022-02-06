@@ -1,12 +1,16 @@
 package com.marketkurly.clonekurly.domain.member;
 
+import com.marketkurly.clonekurly.controller.dto.MemberDto;
 import com.marketkurly.clonekurly.domain.Authority;
+import com.sun.istack.NotNull;
 import lombok.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Getter
+@Setter
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Table(name = "member")
@@ -16,6 +20,7 @@ public class Member {
 
 
     @Id
+    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="member_id",nullable = false)
     private Long id;
@@ -26,7 +31,8 @@ public class Member {
     @Column(length = 45, name = "name",nullable = false)
     private String name;
 
-    @Column(length = 100, name="email",nullable = false)
+    @NotNull
+    @Column(length = 100, name="email",nullable = false,unique = true)
     private String email;
 
     @Enumerated(EnumType.STRING)
@@ -38,7 +44,7 @@ public class Member {
 
     @Column(name="grade")
     @Enumerated(EnumType.STRING)
-    private String grade;
+    private Grade grade;
 
     @Column(nullable = false)
     private String address;
@@ -55,4 +61,17 @@ public class Member {
     @Temporal(TemporalType.TIMESTAMP)
     private Date joineDate;
 
+    public static Member createMember(MemberDto memberJoin, PasswordEncoder passwordEncoder){
+        Member member = new Member();
+        member.setName(memberJoin.getName());
+        member.setId(memberJoin.getId());
+        member.setEmail(memberJoin.getEmail());
+        member.setAddress(memberJoin.getAddress());
+        member.setGender(memberJoin.getGender());
+        member.setBirthDate(memberJoin.getBirthDate());
+        String password = passwordEncoder.encode(memberJoin.getPassword());
+        member.setPassword(password);
+        member.grade = Grade.BASIC;
+        return member;
+    }
 }

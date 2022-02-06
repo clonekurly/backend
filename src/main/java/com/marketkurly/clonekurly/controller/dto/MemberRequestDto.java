@@ -15,6 +15,7 @@ public class MemberRequestDto {
     private String email;
     private String password;
 
+
     public Member toMember(PasswordEncoder passwordEncoder) {
         return Member.builder()
                 .email(email)
