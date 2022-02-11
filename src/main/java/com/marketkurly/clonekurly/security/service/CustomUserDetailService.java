@@ -1,6 +1,6 @@
 package com.marketkurly.clonekurly.security.service;
 
-import com.marketkurly.clonekurly.domain.Member;
+import com.marketkurly.clonekurly.domain.member.Member;
 import com.marketkurly.clonekurly.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

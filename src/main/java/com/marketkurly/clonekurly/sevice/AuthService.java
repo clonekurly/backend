@@ -3,7 +3,7 @@ package com.marketkurly.clonekurly.sevice;
 import com.marketkurly.clonekurly.controller.dto.MemberRequestDto;
 import com.marketkurly.clonekurly.controller.dto.MemberResponseDto;
 import com.marketkurly.clonekurly.controller.dto.TokenDto;
-import com.marketkurly.clonekurly.domain.Member;
+import com.marketkurly.clonekurly.domain.member.Member;
 import com.marketkurly.clonekurly.repository.MemberRepository;
 import com.marketkurly.clonekurly.security.jwt.TokenProvider;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +29,6 @@ public class AuthService {
         }
 
         Member member = memberRequestDto.toMember(passwordEncoder);
-
         return MemberResponseDto.of(memberRepository.save(member));
     }
 
