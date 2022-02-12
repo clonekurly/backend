@@ -1,4 +1,4 @@
-package com.marketkurly.clonekurly.controller.dto;
+package com.marketkurly.clonekurly.controller.dto.member;
 
 import com.marketkurly.clonekurly.domain.Authority;
 import com.marketkurly.clonekurly.domain.member.Member;
