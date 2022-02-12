@@ -1,4 +1,4 @@
-package com.marketkurly.clonekurly.controller.dto;
+package com.marketkurly.clonekurly.controller.dto.token;
 
 
 import lombok.AllArgsConstructor;
