@@ -1,8 +1,8 @@
 package com.marketkurly.clonekurly.sevice;
 
-import com.marketkurly.clonekurly.controller.dto.MemberRequestDto;
-import com.marketkurly.clonekurly.controller.dto.MemberResponseDto;
-import com.marketkurly.clonekurly.controller.dto.TokenDto;
+import com.marketkurly.clonekurly.controller.dto.member.MemberRequestDto;
+import com.marketkurly.clonekurly.controller.dto.member.MemberResponseDto;
+import com.marketkurly.clonekurly.controller.dto.token.TokenDto;
 import com.marketkurly.clonekurly.domain.member.Member;
 import com.marketkurly.clonekurly.repository.MemberRepository;
 import com.marketkurly.clonekurly.security.jwt.TokenProvider;
