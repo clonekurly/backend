@@ -1,16 +1,12 @@
 package com.marketkurly.clonekurly.sevice;
 
-import com.marketkurly.clonekurly.controller.dto.MemberDto;
-import com.marketkurly.clonekurly.controller.dto.MemberResponseDto;
+import com.marketkurly.clonekurly.controller.dto.member.MemberDto;
+import com.marketkurly.clonekurly.controller.dto.member.MemberResponseDto;
 import com.marketkurly.clonekurly.repository.MemberRepository;
 import com.marketkurly.clonekurly.security.util.SecurityUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 @Service
 @Transactional
