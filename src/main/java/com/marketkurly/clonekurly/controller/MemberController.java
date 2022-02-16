@@ -1,13 +1,10 @@
 package com.marketkurly.clonekurly.controller;
 
-import com.marketkurly.clonekurly.controller.dto.MemberDto;
-import com.marketkurly.clonekurly.controller.dto.MemberRequestDto;
-import com.marketkurly.clonekurly.controller.dto.MemberResponseDto;
+import com.marketkurly.clonekurly.controller.dto.member.MemberDto;
+import com.marketkurly.clonekurly.controller.dto.member.MemberResponseDto;
 import com.marketkurly.clonekurly.sevice.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

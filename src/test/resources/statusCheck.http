@@ -1,0 +1,42 @@
+### 회원가입
+POST http://localhost:8080/auth/signup
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "testtest"
+}
+
+### 회원가입치 - 중복회원
+POST http://localhost:8080/auth/signup
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "testtest"
+}
+
+### 로그인
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "testtest"
+}
+
+### 로그인 - 비밀번호 불일
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "test"
+}
+
+
+
+
+### 내 정보 확인
+GET http://localhost:8080/member/me
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTY0MzI1ODM4M30.22rrK59CZ_n8hlad5XPbHPrYKn6I3VcJItGThBHSHdIxfW5s0ZNmmcDDc4e1LUy87LEvlTgCtyaCdR08wo405Q

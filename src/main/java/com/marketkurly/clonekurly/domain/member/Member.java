@@ -1,6 +1,6 @@
 package com.marketkurly.clonekurly.domain.member;
 
-import com.marketkurly.clonekurly.controller.dto.MemberDto;
+import com.marketkurly.clonekurly.controller.dto.member.MemberDto;
 import com.marketkurly.clonekurly.domain.Authority;
 import com.sun.istack.NotNull;
 import lombok.*;

@@ -1,8 +1,8 @@
 package com.marketkurly.clonekurly.controller;
 
-import com.marketkurly.clonekurly.controller.dto.MemberRequestDto;
-import com.marketkurly.clonekurly.controller.dto.MemberResponseDto;
-import com.marketkurly.clonekurly.controller.dto.TokenDto;
+import com.marketkurly.clonekurly.controller.dto.member.MemberRequestDto;
+import com.marketkurly.clonekurly.controller.dto.member.MemberResponseDto;
+import com.marketkurly.clonekurly.controller.dto.token.TokenDto;
 import com.marketkurly.clonekurly.sevice.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
